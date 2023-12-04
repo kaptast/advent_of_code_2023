@@ -15,3 +15,4 @@ int SummarizeLines(Func<string, int> solver)
 }
 
 Console.WriteLine(SummarizeLines(Part1.SummarizeLine));
+Console.WriteLine(SummarizeLines(Part2.SummarizeLine));

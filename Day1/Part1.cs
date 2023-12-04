@@ -4,17 +4,18 @@ public static class Part1
 {
     public static int SummarizeLine(string line)
     {
-        int? firstDigit = null, secondDigit = null;
-
-        foreach (var character in line)
+        var digits = new List<char>();
+        foreach (var digit in line)
         {
-            if (char.IsDigit(character))
+            if (char.IsDigit(digit))
             {
-                firstDigit ??= int.Parse(character.ToString());
-                secondDigit = int.Parse(character.ToString());
+                digits.Add(digit);
             }
         }
 
-        return firstDigit.GetValueOrDefault() * 10 + secondDigit.GetValueOrDefault();
+        var firstDigit = digits.First().ToString();
+        var secondDigit = digits.Last().ToString();
+
+        return int.Parse(firstDigit + secondDigit);
     }
 }
