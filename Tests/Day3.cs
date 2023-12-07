@@ -46,7 +46,7 @@ public class Day3
     [InlineData(4, 7, 4, 9, false)]
     public void IsSymbolInRangeReturnsCorrectValue(int x1, int y1, int x2, int y2, bool expected)
     {
-        var result = Part1.IsSymbolInRange(symbols, x1, y1, x2, y2, 10, 9, out var foundSymbol);
+        var result = Part1.IsSymbolInRange(symbols, x1, x2, y1, out var foundSymbol);
 
         Assert.Equal(expected, result);
     }
